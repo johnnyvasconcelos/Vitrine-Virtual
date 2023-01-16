@@ -19,18 +19,32 @@
         <!-- bavbar -->
         <nav class="nav" id="nav">
             <div class="container">
-                <a href="./index.html" class="logo">Rebecca</a>
-                <ul class="menu">
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./index.html">home</a></li>
-                    <li><span class="icon"><i class='bx bxs-cart' ></i><div class="counter">{{counter}}</div></span></li>
-                </ul>
-                <div class="mobile-btn">
-                    |||
+                <div class="column">
+                    <a href="./index.html" class="logo">Rebecca</a>
+                    <div class="search-area">
+                        <input type="search" placeholder="Search...">
+                        <button type="submit"><i class="bx bx-search"></i></button>
+                    </div>
+                    <div class="icons">
+                        <span class="icon"><i class='bx bx-cart' ></i><div class="counter">{{counter}}</div></span>
+                        <span class="icon"><i class='bx bx-heart' ></i><div class="counter">{{counter}}</div></span>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="nav-btn">
+                        <span class="bars">|||</span><span>categorias</span>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="./index.html">home</a></li>
+                        <li><a href="./index.html">home</a></li>
+                        <li><a href="./index.html">home</a></li>
+                        <li><a href="./index.html">home</a></li>
+                        <li><a href="./index.html">home</a></li>
+                        <li><a href="./index.html">home</a></li>
+                    </ul>
+                    <div class="mobile-btn bars">
+                        |||
+                    </div>
                 </div>
             </div>
         </nav>
@@ -38,10 +52,112 @@
         <nav class="menu-mobile">
             <div class="container">
                 <ul>
-                    <li><a href="#">home</a></li>
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html">home</a></li>
                 </ul>
             </div>
         </nav>
+        <!-- produtos -->
+        <section id="shop-area" class="shop-area">
+            <div class="container">
+                <h2>Shop Area</h2>
+                <p>Produtos organizados por categoria</p>
+            </div>
+            <div class="produtos">
+                <div class="container">
+                <div class="produto">
+                    <div class="image">
+                        <span class="promo">40%</span>
+                        <div class="heart"><i class="bx bx-heart"></i></div>
+                        <img src="./assets/images/produto.png" alt="produto">
+                        <div class="compra">
+                            <i class="bx bxs-cart"></i>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <h3 class="nome" aria-label="produto">Produto</h3>
+                    <div class="price">
+                        <span class="preco">R$ {{preco}},00</span>
+                        <span class="real">R$ 120,00</span>
+                    </div>
+                </div>
+                <div class="produto">
+                        <div class="image">
+                            <span class="promo">40%</span>
+                            <div class="heart"><i class="bx bx-heart"></i></div>
+                            <img src="./assets/images/produto.png" alt="produto">
+                            <div class="compra">
+                                <i class="bx bxs-cart"></i>
+                            </div>
+                        </div>
+                        <div class="reviews">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                        </div>
+                        <h3 class="nome" aria-label="produto">Produto</h3>
+                        <div class="price">
+                            <span class="preco">R$ {{preco}},00</span>
+                            <span class="real">R$ 120,00</span>
+                        </div>
+                </div>
+                <div class="produto">
+                    <div class="image">
+                        <span class="promo">40%</span>
+                        <div class="heart"><i class="bx bx-heart"></i></div>
+                        <img src="./assets/images/produto.png" alt="produto">
+                        <div class="compra">
+                            <i class="bx bxs-cart"></i>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <h3 class="nome" aria-label="produto">Produto</h3>
+                    <div class="price">
+                        <span class="preco">R$ {{preco}},00</span>
+                        <span class="real">R$ 120,00</span>
+                    </div>
+                </div>
+                <div class="produto">
+                    <div class="image">
+                        <span class="promo">40%</span>
+                        <div class="heart"><i class="bx bx-heart"></i></div>
+                        <img src="./assets/images/produto.png" alt="produto">
+                        <div class="compra">
+                            <i class="bx bxs-cart"></i>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                    </div>
+                    <h3 class="nome" aria-label="produto">Produto</h3>
+                    <div class="price">
+                        <span class="preco">R$ {{preco}},00</span>
+                        <span class="real">R$ 120,00</span>
+                    </div>
+                </div>
+        </section>
     </div>
 </body>
 </html>
