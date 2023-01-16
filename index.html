@@ -1,19 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- versão do curso -->
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./assets/style.css">
+  <!--Box Icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- VUE JS 2 -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js" defer></script>
+  <!-- Scripts -->
   <script src="./assets/index.js" defer></script>
-  <title>Rebeca Modas</title>
+  <title>Rebecca Modas</title>
 </head>
-
 <body>
-  <div id="app">
-
-  </div>
+    <div id="wrapper">
+        <!-- bavbar -->
+        <nav class="nav" id="nav">
+            <div class="container">
+                <a href="./index.html" class="logo">Rebecca</a>
+                <ul class="menu">
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./index.html">home</a></li>
+                    <li><span class="icon"><i class='bx bxs-cart' ></i><div class="counter">{{counter}}</div></span></li>
+                </ul>
+                <div class="mobile-btn">
+                    |||
+                </div>
+            </div>
+        </nav>
+        <!-- menu mobile -->
+        <nav class="menu-mobile">
+            <div class="container">
+                <ul>
+                    <li><a href="#">home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 </body>
-
 </html>

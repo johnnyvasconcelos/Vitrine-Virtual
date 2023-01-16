@@ -1,7 +1,7 @@
 const vm = new Vue({
-    el: "#app",
+    el: "#wrapper",
     data: {
-
+        counter: 0
     },
     methods: {
 
