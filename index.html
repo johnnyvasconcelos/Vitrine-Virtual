@@ -64,16 +64,16 @@
         <!-- produtos -->
         <section id="shop-area" class="shop-area">
             <div class="container">
-                <h2>Shop Area</h2>{{produtos}}
+                <h2>Shop Area</h2>
                 <p>Produtos organizados por categoria</p>
             </div>
             <div class="produtos">
                 <div class="container">
-                <div class="produto">
+                <div v-for="produto in produtos" class="produto" :key="produto.id">
                     <div class="image">
+                        <img :src="produto.img" :alt="produto.nome">
                         <span class="promo">40%</span>
                         <div class="heart"><i class="bx bx-heart"></i></div>
-                        <img src="./assets/images/produto.png" alt="produto">
                         <div class="compra">
                             <i class="bx bxs-cart"></i>
                         </div>
@@ -85,78 +85,22 @@
                         <i class="bx bxs-star"></i>
                         <i class="bx bxs-star"></i>
                     </div>
-                    <h3 class="nome" aria-label="produto">Produto</h3>
+                    <h3 class="nome" :aria-label="produto.nome">{{produto.nome}}</h3>
                     <div class="price">
-                        <span class="preco">R$ {{preco}},00</span>
+                        <span class="preco">R$ {{produto.preco}},00</span>
                         <span class="real">R$ 120,00</span>
                     </div>
                 </div>
-                <div class="produto">
-                        <div class="image">
-                            <span class="promo">40%</span>
-                            <div class="heart"><i class="bx bx-heart"></i></div>
-                            <img src="./assets/images/produto.png" alt="produto">
-                            <div class="compra">
-                                <i class="bx bxs-cart"></i>
-                            </div>
-                        </div>
-                        <div class="reviews">
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                            <i class="bx bxs-star"></i>
-                        </div>
-                        <h3 class="nome" aria-label="produto">Produto</h3>
-                        <div class="price">
-                            <span class="preco">R$ {{preco}},00</span>
-                            <span class="real">R$ 120,00</span>
-                        </div>
-                </div>
+                <!--
                 <div class="produto">
                     <div class="image">
-                        <span class="promo">40%</span>
-                        <div class="heart"><i class="bx bx-heart"></i></div>
+                        
                         <img src="./assets/images/produto.png" alt="produto">
-                        <div class="compra">
-                            <i class="bx bxs-cart"></i>
-                        </div>
+
                     </div>
-                    <div class="reviews">
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                    </div>
-                    <h3 class="nome" aria-label="produto">Produto</h3>
-                    <div class="price">
-                        <span class="preco">R$ {{preco}},00</span>
-                        <span class="real">R$ 120,00</span>
-                    </div>
+                    
                 </div>
-                <div class="produto">
-                    <div class="image">
-                        <span class="promo">40%</span>
-                        <div class="heart"><i class="bx bx-heart"></i></div>
-                        <img src="./assets/images/produto.png" alt="produto">
-                        <div class="compra">
-                            <i class="bx bxs-cart"></i>
-                        </div>
-                    </div>
-                    <div class="reviews">
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                        <i class="bx bxs-star"></i>
-                    </div>
-                    <h3 class="nome" aria-label="produto">Produto</h3>
-                    <div class="price">
-                        <span class="preco">R$ {{preco}},00</span>
-                        <span class="real">R$ 120,00</span>
-                    </div>
-                </div>
+            -->
         </section>
     </div>
 </body>

@@ -3,7 +3,9 @@ const vm = new Vue({
     data: {
         counter: 0,
         preco: 120 - 10,
-        produtos: {}
+        produtos: {},
+        showMenu: false,
+        scrollNumber: 0
     },
     methods: {
         produtosFetch() {
@@ -12,12 +14,22 @@ const vm = new Vue({
             .then(r => {
                 this.produtos = r
             })
+        },
+        handleScroll() {
+            let nav = document.querySelector('#nav')
+            this.scrollNumber = window.scrollY
+            if (this.scrollNumber > 100) {
+                nav.classList.add('navShadow')
+            } else {
+                nav.classList.remove('navShadow')
+            }
         }
     },
     computed: {
         
     },
     created() {
-        this.produtosFetch()
+        this.produtosFetch(),
+        window.addEventListener('scroll', this.handleScroll)
     }
 })
