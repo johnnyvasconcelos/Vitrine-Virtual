@@ -67,17 +67,34 @@
                 <h2>Shop Area</h2>
                 <p>Produtos organizados por categoria</p>
             </div>
-            <section class="modal">
-                {{produtoModal}}
+            <!-- modal -->
+            <div class="layer" v-if="produtoModal" @click="produtoModal = !produtoModal"></div>
+            <section class="modal" v-if="produtoModal">
+                <div class="modal-container">
+                    <div class="close-modal" @click="produtoModal = !produtoModal">
+                        <i class="bx bx-x"></i>
+                    </div>
+                    <div class="modal-image">
+                        <img :src="produtoModal.img" :alt="produtoModal.nome">
+                    </div>
+                    <div class="modal-description">
+                        <h3>{{produtoModal.nome}}</h3>
+                        <p>{{produtoModal.descricao}}</p>
+                        <div class="data">
+                            <p class="price">{{produtoModal.preco | numeroPreco}}</p>
+                            <button class="btn-shop"><i class="bx bx-cart"></i> adicionar</button>
+                        </div>
+                    </div>
+                 </div>
             </section>
             <div class="produtos">
                 <div class="container">
                 <div v-for="produto in produtos" class="produto" :key="produto.id">
-                    <div class="image" @click="fetchProduto(produto.id)">
+                    <div class="image">
                         <img :src="produto.img" :alt="produto.nome">
                         <span class="promo">{{produto.promo }}</span>
                         <div class="heart"><i class="bx bx-heart"></i></div>
-                        <div class="compra">
+                        <div class="compra" @click="fetchProduto(produto.id)">
                             <i class="bx bxs-cart"></i>
                         </div>
                     </div>

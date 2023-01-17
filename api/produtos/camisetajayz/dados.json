@@ -1,10 +1,10 @@
 {
-  "id": "smartphone",
-  "nome": "Smartphone",
-  "preco": 1299,
+  "id": "camisetajayz",
+  "nome": "Camiseta Feminina Jay-Z",
+  "preco": 76.80,
   "descricao": "Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a necessidade de renovação processual causa impacto indireto na reavaliação do orçamento setorial.",
   "estoque": 3,
-  "img": "./api/produtos/smartphone/smartphone-foto.jpg",
+  "img": "./api/produtos/camisetajayz/camiseta.png",
   "reviews": [
     {
       "nome": "Rogério",

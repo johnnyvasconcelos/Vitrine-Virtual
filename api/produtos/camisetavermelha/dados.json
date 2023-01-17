@@ -1,10 +1,10 @@
 {
-  "id": "tablet",
-  "nome": "Tablet",
-  "preco": 899,
+  "id": "camisetavermelha",
+  "nome": "Camiseta I Don't Vermelha",
+  "preco": 159,
   "descricao": "Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a necessidade de renovação processual causa impacto indireto na reavaliação do orçamento setorial.",
   "estoque": 2,
-  "img": "./api/produtos/tablet/tablet-foto.jpg",
+  "img": "./api/produtos/camisetavermelha/camiseta.png",
   "reviews": [
     {
       "nome": "Rogério",

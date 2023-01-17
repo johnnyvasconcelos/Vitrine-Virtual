@@ -1,10 +1,10 @@
 {
-  "id": "smartwatch",
-  "nome": "Smartwatch",
-  "preco": 1199,
+  "id": "jaquetapreta",
+  "nome": "Jaqueta de Couro Preta",
+  "preco": 234,
   "descricao": "Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a necessidade de renovação processual causa impacto indireto na reavaliação do orçamento setorial.",
   "estoque": 5,
-  "img": "./api/produtos/smartwatch/smartwatch-foto.jpg",
+  "img": "./api/produtos/jaquetapreta/jaqueta.png",
   "reviews": [
     {
       "nome": "Rogério",

@@ -400,6 +400,103 @@ h4 {
     z-index: 2000;
 }
 
+#shop-area .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--light);
+    z-index: 2500;
+    border-radius: 4px;
+}
+
+#shop-area .modal-container {
+    padding: 20px;
+    width: 750px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#shop-area .modal-container .close-modal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--color-3);
+    font-size: 45px;
+    font-weight: 900;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#shop-area .modal-container .modal-image {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+    padding: 15px;
+}
+
+#shop-area .modal-container .modal-description {
+    width: 70%;
+    padding: 20px;
+}
+
+#shop-area .modal-container .modal-description h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+#shop-area .modal-container .data {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+#shop-area .modal-container .data .price {
+    color: var(--ligth-dark);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#shop-area .modal-container .data .btn-shop {
+    background-color: #0dd77d;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    padding: 15px;
+    border: none;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+#shop-area .modal-container .data .btn-shop:hover {
+    background-color: #04ac61;
+    transform: var(--scale);
+}
+
+#shop-area .modal-container .modal-image img {
+    width: 100%!important;
+    height: auto!important;
+}
+
+#shop-area .layer {
+    background-color: #00000053;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2300;
+}
+
 @media (min-width: 990px) {
     #nav .container .mobile-btn {
         display: none;
@@ -442,6 +539,30 @@ h4 {
     #nav .container .column .nav-btn,
     #nav .container .column .icons {
     display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    #shop-area .modal {
+        width: 90%;
+    }
+    #shop-area .modal-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    #shop-area .modal-container .modal-image {
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+    }
+    #shop-area .modal-container .modal-description > p {
+        display: none;
+    }
+    #shop-area .modal-container .modal-description .data {
+        justify-content: center;
     }
 }
 
