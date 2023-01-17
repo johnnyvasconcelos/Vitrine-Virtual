@@ -15,6 +15,11 @@ const vm = new Vue({
                 this.produtos = r
             })
         },
+        zeroPromo() {
+            let promo = document.querySelectorAll('.promo')
+            console.log(promo[1])
+            alert('promo ok')
+        },
         handleScroll() {
             let nav = document.querySelector('#nav')
             this.scrollNumber = window.scrollY
@@ -25,11 +30,22 @@ const vm = new Vue({
             }
         }
     },
-    computed: {
-        
-    },
     created() {
         this.produtosFetch(),
         window.addEventListener('scroll', this.handleScroll)
+    },
+    mounted() {
+        this.$nextTick(() => {
+            setTimeout(() => {
+                let promo = document.querySelectorAll('.promo')
+                let precoAntigo = document.querySelectorAll('.real')
+                for (let i = 0; i < promo.length; i++) {
+                    if (promo[i].textContent == 0) {
+                        promo[i].style.display = 'none'
+                        precoAntigo[i].style.display = 'none'
+                    }
+                }
+            }, 200)
+        })
     }
 })

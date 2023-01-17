@@ -72,7 +72,7 @@
                 <div v-for="produto in produtos" class="produto" :key="produto.id">
                     <div class="image">
                         <img :src="produto.img" :alt="produto.nome">
-                        <span class="promo">40%</span>
+                        <span class="promo">{{produto.promo}}</span>
                         <div class="heart"><i class="bx bx-heart"></i></div>
                         <div class="compra">
                             <i class="bx bxs-cart"></i>
@@ -88,19 +88,9 @@
                     <h3 class="nome" :aria-label="produto.nome">{{produto.nome}}</h3>
                     <div class="price">
                         <span class="preco">R$ {{produto.preco}},00</span>
-                        <span class="real">R$ 120,00</span>
+                        <span class="real">R$ {{produto.precoantigo}},00</span>
                     </div>
                 </div>
-                <!--
-                <div class="produto">
-                    <div class="image">
-                        
-                        <img src="./assets/images/produto.png" alt="produto">
-
-                    </div>
-                    
-                </div>
-            -->
         </section>
     </div>
 </body>

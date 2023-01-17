@@ -1,32 +1,67 @@
 [
   {
-    "id": "notebook",
-    "nome": "Notebook",
-    "preco": 2999,
-    "img": "./api/produtos/notebook/notebook.jpg"
+    "id": "Bolsa de Couro Preta",
+    "nome": "Bolsa de Couro Preta",
+    "preco": 135,
+    "precoantigo": 225,
+    "img": "./api/produtos/bolsapreta/bolsa.png",
+    "promo": 40
   },
   {
-    "id": "smartphone",
-    "nome": "Smartphone",
-    "preco": 1299,
-    "img": "./api/produtos/smartphone/smartphone.jpg"
+    "id": "Camiseta Feminina Jay-Z",
+    "nome": "Camiseta Feminina Jay-Z",
+    "preco": 76.80,
+    "precoantigo": 128,
+    "img": "./api/produtos/camisetajayz/camiseta.png",
+    "promo": 40
   },
   {
-    "id": "tablet",
-    "nome": "Tablet",
-    "preco": 899,
-    "img": "./api/produtos/tablet/tablet.jpg"
+    "id": "Jaqueta de Couro Preta",
+    "nome": "Jaqueta de Couro Preta",
+    "preco": 234,
+    "precoantigo": 335,
+    "img": "./api/produtos/jaquetapreta/jaqueta.png",
+    "promo": 30
   },
   {
-    "id": "smartwatch",
-    "nome": "Smartwatch",
-    "preco": 1199,
-    "img": "./api/produtos/smartwatch/smartwatch.jpg"
+    "id": "Tamanco Rosa",
+    "nome": "Tamanco Rosa",
+    "preco": 196.80,
+    "precoantigo": 246,
+    "img": "./api/produtos/tamancorosa/tamanco.png",
+    "promo": 20
   },
   {
-    "id": "speaker",
-    "nome": "Speaker",
-    "preco": 599,
-    "img": "./api/produtos/speaker/speaker.jpg"
+    "id": "Camiseta I Don't Vermelha",
+    "nome": "Camiseta I Don't Vermelha",
+    "preco": 159,
+    "precoantigo": "",
+    "img": "./api/produtos/camisetavermelha/camiseta.png",
+    "promo": 0
+  },
+  {
+    "id": "Jaqueta Unissex Preta",
+    "nome": "Jaqueta Unissex Preta",
+    "preco": 99,
+    "precoantigo": 248,
+    "img": "./api/produtos/jaquetaunissex/jaqueta.png",
+    "promo": 60
+  },
+  
+  {
+    "id": "Camiseta Básica Feminina",
+    "nome": "Camiseta Básica Feminina",
+    "preco": 549,
+    "precoantigo": "",
+    "img": "./api/produtos/camisetabasica/camiseta.png",
+    "promo": 0
+  },
+  {
+    "id": "Bolsa de Latex Preta",
+    "nome": "Bolsa de Latex Preta",
+    "preco": 95,
+    "precoantigo": 119,
+    "img": "./api/produtos/bolsalatex/bolsa.png",
+    "promo": 20
   }
 ]
