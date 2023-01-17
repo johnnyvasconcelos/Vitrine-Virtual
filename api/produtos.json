@@ -1,6 +1,6 @@
 [
   {
-    "id": "Bolsa de Couro Preta",
+    "id": "bolsapreta",
     "nome": "Bolsa de Couro Preta",
     "preco": 135,
     "precoantigo": 225,
@@ -8,7 +8,7 @@
     "promo": 40
   },
   {
-    "id": "Camiseta Feminina Jay-Z",
+    "id": "camisetajayz",
     "nome": "Camiseta Feminina Jay-Z",
     "preco": 76.80,
     "precoantigo": 128,
@@ -16,7 +16,7 @@
     "promo": 40
   },
   {
-    "id": "Jaqueta de Couro Preta",
+    "id": "jaquetapreta",
     "nome": "Jaqueta de Couro Preta",
     "preco": 234,
     "precoantigo": 335,
@@ -24,7 +24,7 @@
     "promo": 30
   },
   {
-    "id": "Tamanco Rosa",
+    "id": "tamancorosa",
     "nome": "Tamanco Rosa",
     "preco": 196.80,
     "precoantigo": 246,
@@ -32,7 +32,7 @@
     "promo": 20
   },
   {
-    "id": "Camiseta I Don't Vermelha",
+    "id": "camisetavermelha",
     "nome": "Camiseta I Don't Vermelha",
     "preco": 159,
     "precoantigo": "",
@@ -40,7 +40,7 @@
     "promo": 0
   },
   {
-    "id": "Jaqueta Unissex Preta",
+    "id": "jaquetaunissex",
     "nome": "Jaqueta Unissex Preta",
     "preco": 99,
     "precoantigo": 248,
@@ -49,7 +49,7 @@
   },
   
   {
-    "id": "Camiseta Básica Feminina",
+    "id": "camisetabasica",
     "nome": "Camiseta Básica Feminina",
     "preco": 549,
     "precoantigo": "",
@@ -57,7 +57,7 @@
     "promo": 0
   },
   {
-    "id": "Bolsa de Latex Preta",
+    "id": "bolsalatex",
     "nome": "Bolsa de Latex Preta",
     "preco": 95,
     "precoantigo": 119,
