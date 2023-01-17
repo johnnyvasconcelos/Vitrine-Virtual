@@ -335,7 +335,7 @@ h4 {
 }
 
 #shop-area .produtos .container .produto .image .promo::after {
-    content: '%';
+    content: '%'
 }
 
 #shop-area .produtos .container .produto .image .heart {

@@ -7,6 +7,14 @@ const vm = new Vue({
         showMenu: false,
         scrollNumber: 0
     },
+    filters: {
+        numeroPreco(valor) {
+            return valor.toLocaleString('pt-BR', {
+                style: "currency",
+                currency: "BRL"
+            })
+        }
+    },
     methods: {
         produtosFetch() {
             fetch("./api/produtos.json")

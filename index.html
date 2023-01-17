@@ -69,10 +69,13 @@
             </div>
             <div class="produtos">
                 <div class="container">
+                <section class="modal">
+                    
+                </section>
                 <div v-for="produto in produtos" class="produto" :key="produto.id">
                     <div class="image">
                         <img :src="produto.img" :alt="produto.nome">
-                        <span class="promo">{{produto.promo}}</span>
+                        <span class="promo">{{produto.promo }}</span>
                         <div class="heart"><i class="bx bx-heart"></i></div>
                         <div class="compra">
                             <i class="bx bxs-cart"></i>
@@ -87,7 +90,7 @@
                     </div>
                     <h3 class="nome" :aria-label="produto.nome">{{produto.nome}}</h3>
                     <div class="price">
-                        <span class="preco">R$ {{produto.preco}},00</span>
+                        <span class="preco">{{produto.preco | numeroPreco}}</span>
                         <span class="real">R$ {{produto.precoantigo}},00</span>
                     </div>
                 </div>
