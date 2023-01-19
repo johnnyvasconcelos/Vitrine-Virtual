@@ -26,7 +26,7 @@
                         <button type="submit"><i class="bx bx-search"></i></button>
                     </div>
                     <div class="icons">
-                        <span class="icon"><i class='bx bx-cart' ></i><div class="counter">{{counter}}</div></span>
+                        <span class="icon"><i class='bx bx-cart' ></i><div class="counter">{{carrinho.length}}</div></span>
                         <span class="icon"><i class='bx bx-heart' ></i><div class="counter">{{counter}}</div></span>
                     </div>
                 </div>
@@ -48,6 +48,21 @@
                 </div>
             </div>
         </nav>
+        <!-- carrinho -->
+        <div class="carrinho-area" id="carrinho-area">
+            <div class="content" v-if="carrinho.length > 0">
+                <ul>
+                    <li v-for="(item, index) in carrinho">
+                        <p>{{item.nome}}</p>
+                        <button @click="removerItem(index)"><i class="bx bx-x"></i></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="p" v-else>Nenhum produto no carrinho.</div>
+            <span class="tot">{{carrinhoTotal | numeroPreco}}</span>
+            <br>
+            <button v-if="carrinho.length > 0">finalizar compra</button>
+        </div>
         <!-- menu mobile -->
         <nav class="menu-mobile">
             <div class="container">
@@ -61,6 +76,15 @@
                 </ul>
             </div>
         </nav>
+        <!-- header -->
+        <header class="header" id="header">
+            <div class="container">
+                <div class="content">
+                    <h1>Promoção Primavera-Verão</h1>
+                    <p>Lorem ipsum dolor amet.</p>
+                </div>
+            </div>
+        </header>
         <!-- produtos -->
         <section id="shop-area" class="shop-area">
             <div class="container">
@@ -82,7 +106,8 @@
                         <p>{{produtoModal.descricao}}</p>
                         <div class="data">
                             <p class="price">{{produtoModal.preco | numeroPreco}}</p>
-                            <button class="btn-shop"><i class="bx bx-cart"></i> adicionar</button>
+                            <button v-if="produtoModal.estoque > 0" class="btn-shop" @click="adicionarItem"><i class="bx bx-cart" ></i> adicionar</button>
+                            <button v-else class="btn-shop esgotado" disabled>produto esgotado</button>
                         </div>
                     </div>
                  </div>
