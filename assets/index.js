@@ -7,7 +7,8 @@ const vm = new Vue({
         showMenu: false,
         scrollNumber: 0,
         produtoModal: false,
-        carrinho: []
+        carrinho: [],
+        showcarrinho: false
     },
     filters: {
         numeroPreco(valor) {

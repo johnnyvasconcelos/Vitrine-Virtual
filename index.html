@@ -26,7 +26,7 @@
                         <button type="submit"><i class="bx bx-search"></i></button>
                     </div>
                     <div class="icons">
-                        <span class="icon"><i class='bx bx-cart' ></i><div class="counter">{{carrinho.length}}</div></span>
+                        <span class="icon" @click="showcarrinho = !showcarrinho"><i class='bx bx-cart' ></i><div class="counter">{{carrinho.length}}</div></span>
                         <span class="icon"><i class='bx bx-heart' ></i><div class="counter">{{counter}}</div></span>
                     </div>
                 </div>
@@ -49,12 +49,12 @@
             </div>
         </nav>
         <!-- carrinho -->
-        <div class="carrinho-area" id="carrinho-area">
+        <div class="carrinho-area" v-if="showcarrinho" id="carrinho-area">
             <div class="content" v-if="carrinho.length > 0">
                 <ul>
-                    <li v-for="(item, index) in carrinho">
-                        <p>{{item.nome}}</p>
-                        <button @click="removerItem(index)"><i class="bx bx-x"></i></button>
+                    <li v-for="(item, index) in carrinho" class="item">
+                        <p class="paragrafo-item">{{item.nome}}</p>
+                        <button @click="removerItem(index)"><i class="bx bx-x" class="compra"></i></button>
                     </li>
                 </ul>
             </div>
