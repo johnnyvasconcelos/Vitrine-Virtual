@@ -4,7 +4,7 @@
     "nome": "Bolsa de Couro Preta",
     "preco": 135,
     "precoantigo": 225,
-    "img": "./api/produtos/bolsapreta/bolsa.png",
+    "img": "./api/produtos/bolsapreta/bolsa.jpg",
     "promo": 40
   },
   {

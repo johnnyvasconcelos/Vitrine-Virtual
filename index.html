@@ -42,7 +42,7 @@
                         <li><a href="./index.html">home</a></li>
                         <li><a href="./index.html">home</a></li>
                     </ul>
-                    <div class="mobile-btn bars">
+                    <div class="mobile-btn bars" @click="showmenumobile = !showmenumobile">
                         |||
                     </div>
                 </div>
@@ -73,18 +73,9 @@
             <p>{{mensagemAlerta}}</p>
         </div>
         <!-- menu mobile -->
-        <nav class="menu-mobile">
-            <div class="container">
-                <ul>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./index.html">home</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="menumobile" :class="{showmenumobile: showmenumobile}">
+
+        </div>
         <!-- header -->
         <header class="header" id="header">
             <div class="container">

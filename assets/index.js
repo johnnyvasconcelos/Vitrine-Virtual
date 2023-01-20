@@ -10,7 +10,8 @@ const vm = new Vue({
         carrinho: [],
         showcarrinho: false,
         alertaAtivo: false,
-        mensagemAlerta: ''
+        mensagemAlerta: '',
+        showmenumobile: false
     },
     filters: {
         numeroPreco(valor) {

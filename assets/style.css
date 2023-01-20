@@ -14,9 +14,11 @@
 :root {
     --color-1: #f6e8f6;
     --color-1-dark: #f0d7f0;
-    --color-2: #d275d2;
-    --color-3: #a23c99;
+    --color-2: #cb8858;
+    --color-3: #e19c6a;
     --color-4: #ca9581;
+    --color-5: #8f9760;
+    --color-5-alt: #7b8449;
     --dark: #282127;
     --ligth-dark: #504b50;
     --ligth-dark-2: #6b6b6b;
@@ -270,12 +272,14 @@ h4 {
     background-image: url(../assets/images/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center 20%;
     background-attachment: local;
     width: 100%;
     margin-top: 150px;
     height: 500px;
     z-index: 800;
     position: relative;
+    border-bottom: 15px solid #cecece;
 }
 
 #header::before {
@@ -305,6 +309,33 @@ h4 {
     font-size: 20px;
 }
 
+/* menu mobile */
+
+.menumobile {
+    display: none;
+    background-color: var(--color-4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 83%;
+    height: 100%;
+    z-index: 3000;
+}
+
+.menumobile.showmenumobile {
+    display: block;
+    animation: showmenu .4s forwards;
+}
+
+@keyframes showmenu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* carrinho */
 
 #carrinho-area {
@@ -312,7 +343,7 @@ h4 {
     max-height: 600px;
     background: var(--light);
     box-shadow: 0px 0px 3px 2px rgba(0,0,0,.2);
-    border-radius: 5px;
+    border-radius: 2px;
     border: 1px solid #dedede;
     position: fixed;
     top: 20px;
@@ -372,20 +403,20 @@ h4 {
 }
 
 #carrinho-area .btn-area button {
-    background: #0fb871;
+    background: var(--color-5);
     color: white;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1.5px;
     padding: 25px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     cursor: pointer;
     font-size: 14px;
 }
 
 #carrinho-area .btn-area button:hover {
-    background: #06975b;
+    background: var(--color-5-alt);
 }
 
 #carrinho-area .content ul {
@@ -402,7 +433,7 @@ h4 {
 
 #carrinho-area .content ul li button {
     color: var(--color-3);
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 12px;
     font-size: 25px;
     border: none;
@@ -470,7 +501,7 @@ h4 {
     color: var(--light);
     background-color: var(--color-3);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 2px;
     opacity: 0;
 }
 
@@ -482,7 +513,7 @@ h4 {
     position: relative;
     background-color: #eee;
     padding: 15px;
-    border-radius: 3px;
+    border-radius: 2px;
     overflow: hidden;
     width: 100%;
     height: 270px;
@@ -502,7 +533,7 @@ h4 {
     color: var(--light);
     z-index: 2200;
     padding: 5px;
-    border-radius: 3px;
+    border-radius: 2px;
     left: 0;
     margin: -5px 10px;
 }
@@ -579,7 +610,7 @@ h4 {
     left: 50%;
     background-color: var(--light);
     z-index: 2500;
-    border-radius: 4px;
+    border-radius: 2px;
     animation: fadeIn .3s forwards; 
 }
 
@@ -606,9 +637,9 @@ h4 {
     margin: auto;
     width: 460px;
     background: var(--light);
-    color: var(--color-3);
+    color: var(--ligth-dark);
     padding: 20px 40px;
-    border-radius: 3px;
+    border-radius: 2px;
     box-shadow: 0px 0px 4px 4px rgba(0,0,0,.3);
     display: none;
 }
@@ -686,7 +717,7 @@ h4 {
 }
 
 #shop-area .modal-container .data .btn-shop {
-    background-color: #0dd77d;
+    background-color: var(--color-5);
     color: white;
     cursor: pointer;
     font-weight: 700;
@@ -695,7 +726,7 @@ h4 {
     padding: 15px;
     border: none;
     font-size: 18px;
-    border-radius: 4px;
+    border-radius: 2px;
     transition: var(--transition);
 }
 
@@ -704,7 +735,7 @@ h4 {
 }
 
 #shop-area .modal-container .data .btn-shop:hover {
-    background-color: #04ac61;
+    background-color: var(--color-5-alt);
     transform: var(--scale);
 }
 
@@ -765,6 +796,15 @@ h4 {
     #nav .container .column .nav-btn,
     #nav .container .column .icons {
     display: none;
+    }
+    #header {
+        margin-top: 40px!important;
+    }
+    #shop-area {
+        margin-top: 60px!important;
+    }
+    #shop-area > .container {
+        margin-bottom: 0px!important;
     }
 }
 
