@@ -49,19 +49,28 @@
             </div>
         </nav>
         <!-- carrinho -->
-        <div class="carrinho-area" v-if="showcarrinho" id="carrinho-area">
+        <div class="carrinho-area" v-if="showcarrinho" id="carrinho-area" :class="{showcarrinho: showcarrinho}">
+            <div class="close-carrinho" @click="showcarrinho = false"><i class="bx bx-x"></i></div>
             <div class="content" v-if="carrinho.length > 0">
                 <ul>
                     <li v-for="(item, index) in carrinho" class="item">
-                        <p class="paragrafo-item">{{item.nome}}</p>
                         <button @click="removerItem(index)"><i class="bx bx-x" class="compra"></i></button>
+                        <div class="text">
+                            <p class="paragrafo-item">{{item.nome}}</p>
+                            <p>{{item.preco | numeroPreco}}</p>
+                        </div>
                     </li>
                 </ul>
             </div>
             <div class="p" v-else>Nenhum produto no carrinho.</div>
-            <span class="tot">{{carrinhoTotal | numeroPreco}}</span>
             <br>
+            <div class="btn-area">
             <button v-if="carrinho.length > 0">finalizar compra</button>
+            <span class="tot">{{carrinhoTotal | numeroPreco}}</span>
+            </div>
+        </div>
+        <div class="alert alerta" id="alert" :class="{ativo: alertaAtivo}">
+            <p>{{mensagemAlerta}}</p>
         </div>
         <!-- menu mobile -->
         <nav class="menu-mobile">

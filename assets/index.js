@@ -8,7 +8,9 @@ const vm = new Vue({
         scrollNumber: 0,
         produtoModal: false,
         carrinho: [],
-        showcarrinho: false
+        showcarrinho: false,
+        alertaAtivo: false,
+        mensagemAlerta: ''
     },
     filters: {
         numeroPreco(valor) {
@@ -36,20 +38,29 @@ const vm = new Vue({
         zeroPromo() {
             let promo = document.querySelectorAll('.promo')
             console.log(promo[1])
-            alert('promo ok')
         },
         adicionarItem() {
             this.produtoModal.estoque --
             const {id, nome, preco} = this.produtoModal
             this.carrinho.push({id, nome, preco})
+            this.alerta(`${nome} foi adicionado ao carrinho.`)
         },
         removerItem(index) {
             this.carrinho.splice(index, 1)
+            this.produtoModal.estoque ++
         },
         checarLocalstorage() {
             if (window.localStorage.carrinho) {
                 this.carrinho = JSON.parse(window.localStorage.carrinho)
             }
+        },
+        compararEstoque() {
+           const items = this.carrinho.filter(item => {
+                if (item.id === this.produtoModal.id) {
+                 return true  
+                }
+            })
+            this.produtoModal.estoque = this.produtoModal.estoque - items.length
         },
         handleScroll() {
             let nav = document.querySelector('#nav')
@@ -59,6 +70,13 @@ const vm = new Vue({
             } else {
                 nav.classList.remove('navShadow')
             }
+        },
+        alerta(mensagem) {
+            this.mensagemAlerta = mensagem
+            this.alertaAtivo = true
+            setTimeout(() => {
+                this.alertaAtivo = false
+            }, 1500)
         }
     },
     computed: {
@@ -73,6 +91,11 @@ const vm = new Vue({
         }
     },
     watch: {
+        produtos() {
+            if (this.produtos) {
+                this.compararEstoque()
+            }
+        },
         carrinho() {
             window.localStorage.carrinho = JSON.stringify(this.carrinho)
         }
